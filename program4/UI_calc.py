@@ -10,6 +10,7 @@
 
 from PySide2 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -37,10 +38,12 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.Result = QtWidgets.QLineEdit(self.layoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
+                                           QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Result.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.Result.sizePolicy().hasHeightForWidth())
         self.Result.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(25)
@@ -107,10 +110,12 @@ class Ui_MainWindow(object):
         self.num_7.setObjectName("num_7")
         self.gridLayout.addWidget(self.num_7, 4, 1, 1, 1)
         self.sym_equal = QtWidgets.QPushButton(self.layoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed,
+                                           QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.sym_equal.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.sym_equal.sizePolicy().hasHeightForWidth())
         self.sym_equal.setSizePolicy(sizePolicy)
         self.sym_equal.setObjectName("sym_equal")
         self.gridLayout.addWidget(self.sym_equal, 4, 5, 2, 1)
@@ -127,47 +132,87 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         # 信号和槽的绑定
-        QtCore.QObject.connect(self.num_1, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_2, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_8, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.sym_dot, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.sym_add, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_4, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_4, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_7, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_3, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.sym_multi, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_5, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_0, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_9, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.num_6, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.sym_equal, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.sym_sub, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.sym_div, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_1, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_2, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_8, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.sym_dot, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.sym_add, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_4, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_4, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_7, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_3, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.sym_multi, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_5, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_0, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_9, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.num_6, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.sym_equal, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.sym_sub, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.sym_div, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
 
-        QtCore.QObject.connect(self.fun_esc, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.fun_backspace, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
-        QtCore.QObject.connect(self.fun_clear, QtCore.SIGNAL("clicked()"), MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.fun_esc, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.fun_backspace, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
+        QtCore.QObject.connect(self.fun_clear, QtCore.SIGNAL("clicked()"),
+                               MainWindow.ButtonAct)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "豆豆的计算器", None, -1))
-        self.sym_div.setText(QtWidgets.QApplication.translate("MainWindow", "/", None, -1))
-        self.sym_add.setText(QtWidgets.QApplication.translate("MainWindow", "+", None, -1))
-        self.num_5.setText(QtWidgets.QApplication.translate("MainWindow", "5", None, -1))
-        self.num_6.setText(QtWidgets.QApplication.translate("MainWindow", "6", None, -1))
-        self.fun_esc.setText(QtWidgets.QApplication.translate("MainWindow", "ESC", None, -1))
-        self.fun_clear.setText(QtWidgets.QApplication.translate("MainWindow", "Clear", None, -1))
-        self.num_4.setText(QtWidgets.QApplication.translate("MainWindow", "4", None, -1))
-        self.num_9.setText(QtWidgets.QApplication.translate("MainWindow", "9", None, -1))
-        self.fun_backspace.setText(QtWidgets.QApplication.translate("MainWindow", "Backspace", None, -1))
-        self.num_3.setText(QtWidgets.QApplication.translate("MainWindow", "0", None, -1))
-        self.sym_sub.setText(QtWidgets.QApplication.translate("MainWindow", "-", None, -1))
-        self.num_2.setText(QtWidgets.QApplication.translate("MainWindow", "2", None, -1))
-        self.num_8.setText(QtWidgets.QApplication.translate("MainWindow", "3", None, -1))
-        self.sym_multi.setText(QtWidgets.QApplication.translate("MainWindow", "*", None, -1))
-        self.num_1.setText(QtWidgets.QApplication.translate("MainWindow", "1", None, -1))
-        self.num_0.setText(QtWidgets.QApplication.translate("MainWindow", "8", None, -1))
-        self.sym_dot.setText(QtWidgets.QApplication.translate("MainWindow", ".", None, -1))
-        self.num_7.setText(QtWidgets.QApplication.translate("MainWindow", "7", None, -1))
-        self.sym_equal.setText(QtWidgets.QApplication.translate("MainWindow", "=", None, -1))
-
+        MainWindow.setWindowTitle(
+            QtWidgets.QApplication.translate("MainWindow", "豆豆的计算器", None, -1))
+        self.sym_div.setText(
+            QtWidgets.QApplication.translate("MainWindow", "/", None, -1))
+        self.sym_add.setText(
+            QtWidgets.QApplication.translate("MainWindow", "+", None, -1))
+        self.num_5.setText(
+            QtWidgets.QApplication.translate("MainWindow", "5", None, -1))
+        self.num_6.setText(
+            QtWidgets.QApplication.translate("MainWindow", "6", None, -1))
+        self.fun_esc.setText(
+            QtWidgets.QApplication.translate("MainWindow", "ESC", None, -1))
+        self.fun_clear.setText(
+            QtWidgets.QApplication.translate("MainWindow", "Clear", None, -1))
+        self.num_4.setText(
+            QtWidgets.QApplication.translate("MainWindow", "4", None, -1))
+        self.num_9.setText(
+            QtWidgets.QApplication.translate("MainWindow", "9", None, -1))
+        self.fun_backspace.setText(
+            QtWidgets.QApplication.translate("MainWindow", "Backspace", None,
+                                             -1))
+        self.num_3.setText(
+            QtWidgets.QApplication.translate("MainWindow", "0", None, -1))
+        self.sym_sub.setText(
+            QtWidgets.QApplication.translate("MainWindow", "-", None, -1))
+        self.num_2.setText(
+            QtWidgets.QApplication.translate("MainWindow", "2", None, -1))
+        self.num_8.setText(
+            QtWidgets.QApplication.translate("MainWindow", "3", None, -1))
+        self.sym_multi.setText(
+            QtWidgets.QApplication.translate("MainWindow", "*", None, -1))
+        self.num_1.setText(
+            QtWidgets.QApplication.translate("MainWindow", "1", None, -1))
+        self.num_0.setText(
+            QtWidgets.QApplication.translate("MainWindow", "8", None, -1))
+        self.sym_dot.setText(
+            QtWidgets.QApplication.translate("MainWindow", ".", None, -1))
+        self.num_7.setText(
+            QtWidgets.QApplication.translate("MainWindow", "7", None, -1))
+        self.sym_equal.setText(
+            QtWidgets.QApplication.translate("MainWindow", "=", None, -1))

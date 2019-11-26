@@ -6,6 +6,7 @@ from UI_calc import Ui_MainWindow
 # 屏幕显示缓存
 ulist = ''
 
+
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
@@ -40,8 +41,9 @@ class MainWindow(QMainWindow):
         # 刷新结果
         self.ui.Result.setText(ulist)
 
-if __name__=="__main__":  
-    app = QApplication(sys.argv)  
-    win = MainWindow()  
-    win.show()  
-    sys.exit(app.exec_())  
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    win = MainWindow()
+    win.show()
+    sys.exit(app.exec_())
